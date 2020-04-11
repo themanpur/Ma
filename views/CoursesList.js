@@ -9,14 +9,16 @@ data = [
         chapter: 1,
         title: 'Titre du chapitre',
         video: "https://photos2.spareroom.co.uk/images/flatshare/listings/large/59/01/59010190.jpg",
-        classe: 'PREMIERE'
+        classe: 'PREMIERE',
+        course: 'En ce samedi matin ensoleillé, j étais en train d apprendre un principe, un point de vue complètement différent de ce que mon papa pauvre m avait enseigné. À l âge de neuf ans, je pris conscience que mes deux pères voulaient que j apprenne. Tous deux m encourageaient à étudier . .. mais pas les mêmes choses.'
     },
     {
         id: 2,
         chapter: 2,
         title: 'Titre du chapitre',
         video: "https://photos2.spareroom.co.uk/images/flatshare/listings/large/59/01/59010190.jpg",
-        classe: 'TERMINALE                                                                                        '
+        classe: 'TERMINALE                                                                                        ',
+        course: 'En ce samedi matin ensoleillé, j étais en train d apprendre un principe, un point de vue complètement différent de ce que mon papa pauvre m avait enseigné. À l âge de neuf ans, je pris conscience que mes deux pères voulaient que j apprenne. Tous deux m encourageaient à étudier . .. mais pas les mêmes choses.'
     }
 ]
     render() {
@@ -41,7 +43,6 @@ const styles = StyleSheet.create({
   },
   listContainer:{
     padding:15,
-    paddingTop: 0
   }
 
 });

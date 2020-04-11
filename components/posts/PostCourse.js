@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View, TouchableOpacity, Image } from 'react-native'
 import PropTypes from 'prop-types'
+
 class PostCourse extends Component {
     render() {
         const { chapter, title, video, classe } = this.props.item
@@ -8,13 +9,14 @@ class PostCourse extends Component {
             <View style={styles.video}>
                 <Image source={{uri:video}} style={styles.postImage}/>     
             </View>
+            <View style={styles.classView}>
+                <Text numberOfLines={1} style={{fontSize: 12, color: 'rgba(0,0,0,0.5)'}}>{classe}</Text>
+            </View>
             <View style={styles.titleView}>
                 <Text style={{fontWeight: 'bold',fontSize: 16, marginRight: 5}}>CHAPITRE {chapter}:</Text>
                 <Text style={{fontWeight: 'bold',fontSize: 14}}>{title}</Text>               
             </View>
-            <View style={styles.classView}>
-                <Text numberOfLines={1} style={{fontSize: 12, color: 'blue'}}>{classe}</Text>
-            </View>
+        
         </TouchableOpacity>
     }
 }
@@ -23,7 +25,7 @@ PostCourse.propTypes = {
   }
 const styles = StyleSheet.create({
     container: {
-        height: 180,
+        height: 200,
         width: '100%',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -43,7 +45,7 @@ const styles = StyleSheet.create({
         width: '100%'
     },
     video:{
-        height:'75%',
+        height:'80%',
         width:'100%',
         alignItems: 'center',
         justifyContent:'center'
