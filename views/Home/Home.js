@@ -19,7 +19,7 @@ class Home extends Component {
                             <FontAwesomeIcon icon={faHome} size={32} color="rgb(220,220,220)" />
                             <Text style={styles.text}>Classes</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.button} activeOpacity={0.8} >
+                        <TouchableOpacity style={styles.button} activeOpacity={0.8} onPress={()=>this.props.navigation.navigate('CourseNavigation',{screen:'CourseListing'})}>
                             <FontAwesomeIcon icon={faGraduationCap} size={32} color="rgb(220,220,220)" />
                             <Text style={styles.text}>Cours</Text>
                         </TouchableOpacity>

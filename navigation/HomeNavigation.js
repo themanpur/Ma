@@ -1,6 +1,8 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import Home from '../views/Home/Home'
+import ClassNavigation from './ClassNavigation';
+import CourseNavigation from './CourseNavigation';
 
 const Stack = createStackNavigator();
 export default function HomeNavigation() {
@@ -12,6 +14,16 @@ export default function HomeNavigation() {
         <Stack.Screen
           name="Home"
           component={Home}
+          options={{ header:()=>null }}
+        />
+        <Stack.Screen
+          name="ClassNavigation"
+          component={ClassNavigation}
+          options={{ header:()=>null }}
+        />
+        <Stack.Screen
+          name="CourseNavigation"
+          component={CourseNavigation}
           options={{ header:()=>null }}
         />
        

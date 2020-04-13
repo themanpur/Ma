@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { StyleSheet,View,FlatList} from 'react-native'
-import ClassItem from '../../components/posts/ClassItem'
+import ClassItem from '../../components/items/ClassItem'
 import issac from '../../assets/imgs/issac.jpg'
 import albert from '../../assets/imgs/albert.jpg'
 class ClassListing extends Component{
@@ -28,7 +28,7 @@ data = [
 
 const styles = StyleSheet.create({
   container:{
-    padding:5
+    padding:8
   }
 
 });
