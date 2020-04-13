@@ -15,11 +15,11 @@ class Home extends Component {
                         <FontAwesomeIcon icon={faBalanceScale} size={180} color={globalStyles.secondaryColor}/>
                     </View>
                     <View style={{flex:1,flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-                        <TouchableOpacity style={styles.button}>
+                        <TouchableOpacity style={styles.button} activeOpacity={0.8} onPress={()=>this.props.navigation.navigate('ClassNavigation',{screen:'ClassListing'})}>
                             <FontAwesomeIcon icon={faHome} size={32} color="rgb(220,220,220)" />
                             <Text style={styles.text}>Classes</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.button}>
+                        <TouchableOpacity style={styles.button} activeOpacity={0.8} >
                             <FontAwesomeIcon icon={faGraduationCap} size={32} color="rgb(220,220,220)" />
                             <Text style={styles.text}>Cours</Text>
                         </TouchableOpacity>
