@@ -7,18 +7,24 @@ data = [
     {
         id: 1,
         chapterNumber: 1,
-        title: 'Titre du chapitre',
+        title: 'résistance des matériaux',
         illustration: "https://photos2.spareroom.co.uk/images/flatshare/listings/large/59/01/59010190.jpg",
         level: 'PREMIERE',
+        description:"est une discipline particulière de la mécanique des milieux continus permettant le calcul des contraintes et déformations",
+        pdfLink:"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+        videoLink:"https://www.youtube.com/watch?v=agcFeeTvsn8"
         
     },
 
     {
       id: 2,
       chapterNumber: 1,
-      title: 'Titre du chapitre',
+      title: "Notions d'élasticité",
       illustration: "https://photos2.spareroom.co.uk/images/flatshare/listings/large/59/01/59010190.jpg",
       level: 'TERMINALE',
+      description:" l'élasticité est la propriété d'un matériau solide à retrouver sa forme d'origine après avoir été déformé",
+      pdfLink:"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      videoLink:"https://www.youtube.com/watch?v=agcFeeTvsn8"
       
   }
 ]
@@ -26,7 +32,7 @@ data = [
      
         return <FlatList showsVerticalScrollIndicator={false} data={this.data} style={styles.container} 
             keyExtractor={(item)=>item.id.toString()} 
-        renderItem={({item})=><CourseItem item={item}/>} />
+        renderItem={({item})=><CourseItem item={item} onPress={()=>this.props.navigation.navigate('CourseNavigation',{screen:'CourseDetail',params:{item}})}/>} />
     }
 }
 

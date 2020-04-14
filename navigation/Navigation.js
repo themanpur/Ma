@@ -1,4 +1,5 @@
-import { createAppContainer } from 'react-navigation'
-import CourseNavigation from './CourseNavigation'
-
-export default createAppContainer(CourseNavigation)
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import HomeNavigation from './HomeNavigation'
+const Navigation= ()=> <NavigationContainer><HomeNavigation/></NavigationContainer>
+export default Navigation

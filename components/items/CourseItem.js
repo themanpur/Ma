@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 class CourseItem extends Component {
     render() {
         const {chapterNumber,illustration,level,title} = this.props.item
-        return <TouchableOpacity style={styles.container} activeOpacity={0.8}>
+        return <TouchableOpacity style={styles.container} activeOpacity={0.8} onPress={this.props.onPress}>
             <View style={styles.video}>
                 <Image source={{uri:illustration}} style={styles.postImage}/>     
             </View>
