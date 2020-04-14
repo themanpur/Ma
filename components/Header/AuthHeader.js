@@ -14,7 +14,7 @@ export default function AuthHeader(props)
 const styles = StyleSheet.create({
     container:{
         alignItems: 'center',
-        flex:2,
+        flex:1,
         justifyContent:'center'
     },
     image:{
