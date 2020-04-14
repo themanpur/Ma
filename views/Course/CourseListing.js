@@ -8,8 +8,7 @@ data = [
         id: 1,
         chapterNumber: 1,
         title: 'Titre du chapitre',
-        videoLink: "https://photos2.spareroom.co.uk/images/flatshare/listings/large/59/01/59010190.jpg",
-        pdfLink:"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+        illustration: "https://photos2.spareroom.co.uk/images/flatshare/listings/large/59/01/59010190.jpg",
         level: 'PREMIERE',
         
     },
@@ -18,8 +17,7 @@ data = [
       id: 2,
       chapterNumber: 1,
       title: 'Titre du chapitre',
-      videoLink: "https://photos2.spareroom.co.uk/images/flatshare/listings/large/59/01/59010190.jpg",
-      pdfLink:"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      illustration: "https://photos2.spareroom.co.uk/images/flatshare/listings/large/59/01/59010190.jpg",
       level: 'TERMINALE',
       
   }

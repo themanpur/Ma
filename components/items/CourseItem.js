@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 
 class CourseItem extends Component {
     render() {
-        const {chapterNumber,videoLink,pdfLink,level,title} = this.props.item
+        const {chapterNumber,illustration,level,title} = this.props.item
         return <TouchableOpacity style={styles.container} activeOpacity={0.8}>
             <View style={styles.video}>
-                <Image source={{uri:videoLink}} style={styles.postImage}/>     
+                <Image source={{uri:illustration}} style={styles.postImage}/>     
             </View>
             <View style={styles.classView}>
                 <Text numberOfLines={1} style={{fontSize: 12, color: 'rgba(0,0,0,0.5)'}}>{level}</Text>
