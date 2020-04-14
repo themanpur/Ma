@@ -1,4 +1,4 @@
-import { createAppContainer } from 'react-navigation'
+import { NavigationContainer } from 'react-navigation/native'
 import CourseNavigation from './CourseNavigation'
 
-export default createAppContainer(CourseNavigation)
+export default NavigationContainer(CourseNavigation)
