@@ -2,6 +2,7 @@ import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import Home from '../views/Home/Home'
 import ClassNavigation from './ClassNavigation';
+import AuthNavigation from './AuthNavigation';
 import CourseNavigation from './CourseNavigation';
 
 const Stack = createStackNavigator();
@@ -26,7 +27,11 @@ export default function HomeNavigation() {
           component={CourseNavigation}
           options={{ header:()=>null }}
         />
-       
+        <Stack.Screen
+          name="AuthNavigation"
+          component={AuthNavigation}
+          options={{ header:()=>null }}
+        />       
       </Stack.Navigator>
     );
   }

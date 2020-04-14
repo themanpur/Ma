@@ -45,7 +45,7 @@ data = [
         <FlatList showsVerticalScrollIndicator={false} data={this.data} style={styles.container} 
             keyExtractor={(item)=>item.id.toString()} 
         renderItem={({item})=><CourseItem item={item} onPress={()=>this.props.navigation.navigate('CourseNavigation',{screen:'CourseDetail',params:{item}})}/>} />
-        <FloatingAction color={globalStyles.secondaryColor} actions={actions} onPressItem={()=>this.props.navigation.navigate('CourseNavigation',{screen:'CourseAdd'})}/>
+        <FloatingAction color={globalStyles.secondaryColor} actions={actions} onPressItem={()=>this.props.navigation.navigate('AuthNavigation',{screen:'LogIn'})}/>
       </View>
     }
 }
