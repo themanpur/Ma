@@ -2,25 +2,25 @@ import React, { Component } from 'react'
 import { Text, StyleSheet, View, TouchableOpacity, Image } from 'react-native'
 import PropTypes from 'prop-types'
 
-class PostCourse extends Component {
+class CourseItem extends Component {
     render() {
-        const { chapter, title, video, classe } = this.props.item
-        return <TouchableOpacity style={styles.container}>
+        const {chapterNumber,illustration,level,title} = this.props.item
+        return <TouchableOpacity style={styles.container} activeOpacity={0.8} onPress={this.props.onPress}>
             <View style={styles.video}>
-                <Image source={{uri:video}} style={styles.postImage}/>     
+                <Image source={{uri:illustration}} style={styles.postImage}/>     
             </View>
             <View style={styles.classView}>
-                <Text numberOfLines={1} style={{fontSize: 12, color: 'rgba(0,0,0,0.5)'}}>{classe}</Text>
+                <Text numberOfLines={1} style={{fontSize: 12, color: 'rgba(0,0,0,0.5)'}}>{level}</Text>
             </View>
             <View style={styles.titleView}>
-                <Text style={{fontWeight: 'bold',fontSize: 16, marginRight: 5}}>CHAPITRE {chapter}:</Text>
+                <Text style={{fontWeight: 'bold',fontSize: 16, marginRight: 5}}>CHAPITRE {chapterNumber}:</Text>
                 <Text style={{fontWeight: 'bold',fontSize: 14}}>{title}</Text>               
             </View>
         
         </TouchableOpacity>
     }
 }
-PostCourse.propTypes = {
+CourseItem.propTypes = {
     item: PropTypes.object,
   }
 const styles = StyleSheet.create({
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderBottomWidth: 0.5,
-        marginBottom: 10
+        marginBottom: 20
     },
     titleView: {
         flexDirection: 'row',
@@ -58,4 +58,4 @@ const styles = StyleSheet.create({
         borderRadius: 10
     }
 });
-export default PostCourse
+export default CourseItem
