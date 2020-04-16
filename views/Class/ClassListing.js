@@ -6,7 +6,7 @@ import {globalStyles} from '../../assets/styles/globalStyles'
 import {Query} from 'react-apollo'
 class ClassListing extends Component{
     refetch = () => console.log(`nothing`)
-    componentDidMount()
+   async componentDidMount()
 {
     this.listener = this.props.navigation.addListener(
       'willFocus',
@@ -19,7 +19,9 @@ class ClassListing extends Component{
 state={
     data:[]
 }
-listener
+listener = {
+  remove:()=>{}
+}
 componentWillUnmount() {
     this.listener.remove()
   }
@@ -30,13 +32,12 @@ componentWillUnmount() {
         {
        ({loading,error,data,refetch,subscribeToMore})=>
        {
-           console.log(data)
          if(refetch) this.refetch=refetch
        return loading?<View style={globalStyles.loader}>
        <ActivityIndicator size="large" color={globalStyles.secondaryColor} animating={true}/>
        </View>:<FlatList showsVerticalScrollIndicator={false} data={this.state.data} style={styles.container} 
             keyExtractor={(item)=>item.id.toString()} 
-        renderItem={({item})=><ClassItem item={item}/>} />
+        renderItem={({item})=><ClassItem item={item} onPress={()=>this.props.navigation.navigate('CourseNavigation',{screen:'CourseListing',params:{classId:item.id}})}/>} />
     }}
     </Query>
     }
@@ -44,7 +45,7 @@ componentWillUnmount() {
 
 const styles = StyleSheet.create({
   container:{
-    padding:8
+    padding:5
   }
 
 });

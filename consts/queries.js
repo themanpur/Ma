@@ -9,3 +9,20 @@ query classesQuery{
   }
 }
 `
+export const COURSE_LIST = gql`
+query coursesByClassQuery($classId:ID!){
+  coursesByClass(classId:$classId){
+    id
+    illustration
+    chapterNumber
+    title
+    level
+    {
+      label
+    }
+    description
+    pdfLink
+    videoLink
+  }
+}
+`

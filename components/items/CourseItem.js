@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View, TouchableOpacity, Image } from 'react-native'
 import PropTypes from 'prop-types'
-
+import albert from '../../assets/imgs/albert.jpg'
 class CourseItem extends Component {
     render() {
         const {chapterNumber,illustration,level,title} = this.props.item
         return <TouchableOpacity style={styles.container} activeOpacity={0.8} onPress={this.props.onPress}>
             <View style={styles.video}>
-                <Image source={{uri:illustration}} style={styles.postImage}/>     
+                <Image source={{uri:illustration}} style={styles.postImage} defaultSource={albert}/>     
             </View>
             <View style={styles.classView}>
-                <Text numberOfLines={1} style={{fontSize: 12, color: 'rgba(0,0,0,0.5)'}}>{level}</Text>
+                <Text numberOfLines={1} style={{fontSize: 12, color: 'rgba(0,0,0,0.5)'}}>{level.label}</Text>
             </View>
             <View style={styles.titleView}>
                 <Text style={{fontWeight: 'bold',fontSize: 16, marginRight: 5}}>CHAPITRE {chapterNumber}:</Text>

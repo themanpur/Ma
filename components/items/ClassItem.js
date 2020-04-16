@@ -7,7 +7,7 @@ class ClassItem extends Component {
     render() {
         const { label,illustration,description} = this.props.item
         return (
-            <TouchableOpacity activeOpacity={0.8} style = {styles.container}>
+            <TouchableOpacity activeOpacity={0.8} style = {styles.container} onPress={this.props.onPress}>
                 <Text style={styles.title}>{label}</Text>
                 <Image source={{uri:illustration}} style={styles.image} defaultSource={albert} />
                 <Text>{description}</Text>
