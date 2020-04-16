@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View, TouchableOpacity ,Image} from 'react-native'
 import PropTypes from 'prop-types'
+import albert from '../../assets/imgs/albert.jpg'
 
 class ClassItem extends Component {
     render() {
@@ -8,7 +9,7 @@ class ClassItem extends Component {
         return (
             <TouchableOpacity activeOpacity={0.8} style = {styles.container}>
                 <Text style={styles.title}>{label}</Text>
-                <Image source={illustration} style={styles.image} />
+                <Image source={{uri:illustration}} style={styles.image} defaultSource={albert} />
                 <Text>{description}</Text>
             </TouchableOpacity>
         )

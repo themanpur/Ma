@@ -4,5 +4,14 @@ export const globalStyles = {
     overlay:{
         backgroundColor: 'rgba(10,10,10,0.4)',
         flex:1
+    },
+    loader: {
+        backgroundColor: secondaryColor,
+        opacity: 0.5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        height: '100%',
+        width: '100%'
     }
 }
