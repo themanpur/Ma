@@ -9,7 +9,7 @@ class Home extends Component {
     render() {
 
         return <ImageBackground source={homeBackground} style={styles.image}>
-            <View style={globalStyles.overlay}>
+            <View style={globalStyles.overlay}> 
                 <View style={styles.container}>
                     <View style={{flex:1}}>
                         <FontAwesomeIcon icon={faBalanceScale} size={180} color={globalStyles.secondaryColor}/>
@@ -20,6 +20,7 @@ class Home extends Component {
                             <Text style={styles.text}>Classes</Text>
                         </TouchableOpacity>
                         <Text style={styles.text1}>“Les hommes construisent trop de murs et pas assez de ponts.” - Sir Issac Newton</Text>
+                        <Text onPress={()=>this.props.navigation.navigate('Admin')} style={{color:'white',textDecorationLine:'underline',fontStyle:'italic',marginTop:20}}>A propo de l'auteur</Text>
                     </View>   
                 </View>
             </View>
