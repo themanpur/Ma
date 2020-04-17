@@ -6,3 +6,10 @@ export const LOGIN = gql`
         }
     }
 `
+export const SIGNUP = gql`
+mutation signUpMutation($name: String!,$email: String,$phone: String!,$level: ID!,$password: String!){
+  signUp(name:$name,email:$email,phone:$phone,level:$level,password:$password){
+    token
+  }
+}
+`

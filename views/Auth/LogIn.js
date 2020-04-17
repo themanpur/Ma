@@ -54,7 +54,7 @@ class LogIn extends React.Component {
           }
         </Mutation>
           </View>
-            <Text style={styles.signUp} onPress={()=>this.props.navigation.navigate('AuthNavigation',{screen:'SignUp'})}>Inscrivez Vous</Text>
+            <Text style={styles.signUp} onPress={()=>this.props.navigation.navigate('AuthNavigation',{screen:'SignUp',params:{navigator:this.props.route.params.navigator,screen:this.props.route.params.screen}})}>Inscrivez Vous</Text>
          </ScrollView>
       </View>
     );
