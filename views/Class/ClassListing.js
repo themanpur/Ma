@@ -6,10 +6,11 @@ import {globalStyles} from '../../assets/styles/globalStyles'
 import {Query} from 'react-apollo'
 class ClassListing extends Component{
     refetch = () => console.log(`nothing`)
+    listener
    async componentDidMount()
 {
     this.listener = this.props.navigation.addListener(
-      'willFocus',
+      'focus',
       async (payload) => {
        const data = await this.refetch()
       data&&this.setState({data:data.data.classes})
@@ -19,12 +20,7 @@ class ClassListing extends Component{
 state={
     data:[]
 }
-listener = {
-  remove:()=>{}
-}
-componentWillUnmount() {
-    this.listener.remove()
-  }
+
 
     render() {
      

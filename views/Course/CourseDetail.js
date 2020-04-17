@@ -13,9 +13,9 @@ class CourseDetail extends Component {
                 </Text>  
                 <Text style={styles.description}>{description}</Text>   
             <View style={styles.video}>
-                <Image source={{uri:illustration}} style={styles.postImage}/>     
+                {videoLink===""?<Image source={{uri:illustration}} style={styles.postImage}/>:null} 
             </View>
-            <Text numberOfLines={1} style={styles.level}>{level}</Text>
+            <Text numberOfLines={1} style={styles.level}>{level.label}</Text>
             <View style={styles.fileContainer}>
                 <View style={styles.file}>
                 <FontAwesomeIcon icon={faFilePdf} size={22} color={globalStyles.secondaryColor}/>

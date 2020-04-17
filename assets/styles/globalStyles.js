@@ -12,6 +12,7 @@ export const globalStyles = {
         alignItems: 'center',
         position: 'absolute',
         height: '100%',
-        width: '100%'
+        width: '100%',
+        zIndex:1000000
     }
 }
