@@ -2,7 +2,7 @@ import React from 'react'
 import { View, StyleSheet, Text, ImageBackground } from 'react-native'
 import { globalStyles } from '../../assets/styles/globalStyles'
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
-import {faPhone, faEnvelope, faMapMarked, faBalanceScale, faGraduationCap} from '@fortawesome/free-solid-svg-icons'
+import {faPhone, faEnvelope, faMapMarked, faGraduationCap, faUser} from '@fortawesome/free-solid-svg-icons'
 import homeBackground from '../../assets/imgs/home_background.png'
 
 class Admin extends React.Component {
@@ -13,13 +13,21 @@ class Admin extends React.Component {
         
         <View style={styles.item_container}>
             <View style={styles.item}>
+                <FontAwesomeIcon size={18} icon={faUser} color={globalStyles.secondary_color}/>
+                <Text style={styles.label}>  Noms</Text>
+            </View>
+            <View style={styles.content}>
+            <Text>Jules FOTSNG</Text>
+            </View>
+        </View>
+        <View style={styles.item_container}>
+            <View style={styles.item}>
                 <FontAwesomeIcon size={18} icon={faGraduationCap} color={globalStyles.secondary_color}/>
                 <Text style={styles.label}>  Profession</Text>
             </View>
             <View style={styles.content}>
             <Text>Ingénieur géni civil</Text>
             </View>
-            
         </View>
         <View style={styles.item_container}>
             <View style={styles.item}>
@@ -29,7 +37,6 @@ class Admin extends React.Component {
             <View style={styles.content}>
             <Text>+237693063228/+237655734950</Text>
             </View>
-            
         </View>
         <View style={styles.item_container}>
             <View style={styles.item}>

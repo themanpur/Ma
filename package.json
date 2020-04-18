@@ -20,6 +20,7 @@
     "apollo-boost": "^0.4.7",
     "apollo-link-context": "^1.0.20",
     "apollo-upload-client": "^13.0.0",
+    "error-ex": "https://github.com/Qix-/node-error-ex",
     "graphql-tag": "^2.10.3",
     "prop-types": "^15.7.2",
     "react": "16.11.0",

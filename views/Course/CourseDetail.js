@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, Image, ScrollView } from 'react-native'
+import { Text, StyleSheet, View, Image, ScrollView, TextInput } from 'react-native'
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
-import { faFilePdf, faEye} from '@fortawesome/free-solid-svg-icons'
+import { faFilePdf, faEye, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 import {globalStyles} from '../../assets/styles/globalStyles'
-
+import CommentItem from '../../components/Comment/CommentItem'
 class CourseDetail extends Component {
-
+    
     render() {
         const {title,description,videoLink,pdfLink,chapterNumber,illustration,level} = this.props.route.params.item
         return <ScrollView style={{flex:1}} contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
@@ -23,6 +23,11 @@ class CourseDetail extends Component {
                 </View>
                 <FontAwesomeIcon icon={faEye} size={28} color={globalStyles.secondaryColor}/>
             </View>
+            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
+            <TextInput style={styles.CommentDescription} placeholder="Laissez un commantaire" />
+            <FontAwesomeIcon icon={faPaperPlane} size={22} color={globalStyles.secondaryColor} style={{flex: 1}}/>
+            </View>
+                <CommentItem style={{ marginBottom: 10 }} date='just now' author='Theman Mobali' content='Tres interessant!!'/>
             </ScrollView>
     }
 }
@@ -67,7 +72,24 @@ const styles = StyleSheet.create({
     file:{
         flexDirection:'row',
         alignItems:'center'
-    }
+    },
+    
+  CommentDescription: {
+    flex: 4,
+    borderWidth: 1,
+    borderRadius: 10,
+    paddingLeft: 5,
+    marginBottom: 10,
+    marginRight: 10
+  },
+  commantaire: {
+    fontWeight: 'bold',
+    borderTopColor: 'rgb(20,20,20)',
+    fontSize: 14,
+    marginBottom: 10,
+    paddingTop: 10,
+    flexDirection: 'column',
+  },
 
 });
 export default CourseDetail
